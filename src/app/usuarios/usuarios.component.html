@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="card list-car">
+    <h5 class="card-header">Lista de Usuarios</h5>
+    <div class="card-body table-responsive" *ngIf="carregarLoading; else carregando">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Login</th>
+            <th scope="col">Email</th>
+            <th scope="col">Data nascimento</th>
+            <th scope="col">Data criação</th>
+            <th scope="col">Data Atualização</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let u of usuarios">
+            <th scope="row">{{u.idUsuario}}</th>
+            <td>{{u.nome}}</td>
+            <td>{{u.login}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.dataNascimento}}</td>
+            <td>{{u.dataCriacao}}</td>
+            <td>{{u.dataAtualizacao}}</td>
+            <td>
+              <button type="button" class="btn btn-primary btn-sm">Editar</button>
+              <button type="button" class="btn btn-danger btn-sm" (click)="deleteUser(u.idUsuario)">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<ng-template #carregando>
+  <div id="preloader">
+    <div class="inner">
+      <div class="bolas">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</ng-template>
