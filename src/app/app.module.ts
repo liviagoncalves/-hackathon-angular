@@ -8,12 +8,14 @@ import {HomeComponent} from './home/home.component';
 import {UsuariosComponent} from './usuarios/usuarios.component';
 import {HttpClientModule} from '@angular/common/http';
 import {UsuariosService} from './usuarios/service/usuarios.service';
+import { CadastrarUsuariosComponent } from './usuarios/cadastrar-usuarios/cadastrar-usuarios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    CadastrarUsuariosComponent
   ],
   imports: [
     BrowserModule,
