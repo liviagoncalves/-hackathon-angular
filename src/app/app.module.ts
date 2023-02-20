@@ -13,9 +13,10 @@ import {FormsModule} from '@angular/forms';
 import {MenubarModule} from 'primeng/menubar';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
-import {RippleModule} from "primeng/ripple";
-import {SharedModule} from "primeng/api";
-import {ToolbarModule} from "primeng/toolbar";
+import {RippleModule} from 'primeng/ripple';
+import {SharedModule} from 'primeng/api';
+import {ToolbarModule} from 'primeng/toolbar';
+import {PasswordModule} from "primeng/password";
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {ToolbarModule} from "primeng/toolbar";
     RippleModule,
     SharedModule,
     ToolbarModule,
+    PasswordModule,
   ],
   providers: [UsuariosService],
   bootstrap: [AppComponent]

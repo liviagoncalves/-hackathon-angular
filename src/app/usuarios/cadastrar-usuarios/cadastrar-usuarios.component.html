@@ -1,38 +1,36 @@
-
 <h2 class="text-center m-3">Cadastrar Usuário</h2>
 <hr>
 <br>
 <div class="p-fluid p-formgrid p-grid">
-    <div class="p-field p-col">
-        <label for="firstname1">Firstname</label>
-        <input id="firstname1" type="text" pInputText>
-    </div>
-    <div class="p-field p-col">
-        <label for="lastname1">Lastname</label>
-        <input id="lastname1" type="text" pInputText>
-    </div>
-    <div class="p-field p-col">
-        <label for="lastname1">Lastname</label>
-        <input id="lastname1" type="text" pInputText>
-    </div>
+  <div class="p-field p-col">
+    <label for="nome">Nome</label>
+    <input id="nome" type="text" name="nome" [(ngModel)]="usuario.nome" pInputText>
+  </div>
+  <div class="p-field p-col">
+    <label for="login">Login</label>
+    <input id="login" type="text" name="login" [(ngModel)]="usuario.login" pInputText>
+  </div>
+  <div class="p-field p-col">
+    <label for="senha">Senha</label>
+    <input id="senha" type="password" name="senha" [(ngModel)]="usuario.senha" pInputText>
+  </div>
 </div>
-
 <div class="p-fluid p-formgrid p-grid">
-    <div class="p-field p-col">
-        <label for="firstname1">Firstname</label>
-        <input id="firstname1" type="text" pInputText>
-    </div>
-    <div class="p-field p-col">
-        <label for="lastname1">Lastname</label>
-        <input id="lastname1" type="text" pInputText>
-    </div>
+  <div class="p-field p-col">
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" [(ngModel)]="usuario.email" pInputText>
+  </div>
+  <div class="p-field p-col">
+    <label for="dataNascimento">Data Nascimento</label>
+    <input id="dataNascimento" type="date" name="dataNascimento" [(ngModel)]="usuario.dataNascimento" pInputText>
+  </div>
 </div>
 <br>
 <hr>
 <br>
 <div class="p-fluid p-formgrid">
   <span class="p-buttonset">
-    <button pButton pRipple icon="pi pi-check" class="p-button-success p-mr-2" (click)="adicionar()" label="Cadastrar" ></button>
+    <button pButton type="submit" pRipple icon="pi pi-check" class="p-button-success p-mr-2" (click)="adicionar()" label="Cadastrar" ></button>
     <button pButton pRipple icon="pi pi-times" class="p-button-danger" label="Cancelar"></button>
   </span>
 </div>
