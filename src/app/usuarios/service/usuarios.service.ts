@@ -20,5 +20,8 @@ export class UsuariosService {
     return this.$http.delete(`${this.API}/${id}`)
   }
 
+  adicionarUsuario(usuarios: Usuarios){
+    return this.$http.post(this.API, usuarios)
+  }
 
 }

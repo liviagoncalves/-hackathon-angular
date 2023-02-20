@@ -7,6 +7,4 @@ export class Usuarios{
   public senha: string;
   public email: string;
   public dataNascimento: string;
-  public dataCriacao: string;
-  public dataAtualizacao: string;
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import {Usuarios} from '../Objetos/Usuarios';
+import { UsuariosService } from '../service/usuarios.service';
 
 @Component({
   selector: 'app-cadastrar-usuarios',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarUsuariosComponent implements OnInit {
 
-  constructor() { }
+  usuario: Usuarios = new Usuarios();
+  constructor(
+    private router: Router,
+    private usuariosService: UsuariosService,
+  ) { }
 
   ngOnInit(): void {
+  }
+  adicionar = () => {
+    this.usuariosService.adicionarUsuario(this.usuario).subscribe(
+      sucess => this.navegar('usuarios'),
+      error => console.log('Não foi possivel cadastrar usuário'),
+      () => console.log('Requisição completo')
+    );
+  }
+  navegar = (rota: any) => {
+    this.router.navigate([rota]);
   }
 
 }

@@ -1,1 +1,28 @@
 <h2 class="text-center m-3">Cadastrar Usuário</h2>
+<hr>
+<br>
+<form class="row g-3">
+  <div class="col-md-4">
+    <label for="nome" class="form-label">Nome</label>
+    <input type="text" class="form-control" name="nome" id="nome" [(ngModel)]="usuario.nome"  placeholder="Informe seu nome">
+  </div>
+  <div class="col-md-4">
+    <label for="login" class="form-label">Login</label>
+    <input type="text" name="login" id="login" class="form-control" [(ngModel)]="usuario.login" placeholder="Informe seu Login">
+  </div>
+  <div class="col-md-4">
+    <label for="senha" class="form-label">Senha</label>
+    <input type="password" name="senha" id="senha" class="form-control" required [(ngModel)]="usuario.senha" placeholder="Informe seu senha">
+  </div>
+  <div class="col-md-6">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" name="email" id="email" class="form-control" [(ngModel)]="usuario.email" placeholder="Informe seu email">
+  </div>
+  <div class="col-md-6">
+    <label for="dataNascimento" class="form-label">Data Nascimento</label>
+    <input type="date" name="dataNascimento" id="dataNascimento" class="form-control" [(ngModel)]="usuario.dataNascimento" placeholder="Informe sua data nascimento">
+  </div>
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button type="submit" class="btn btn-primary" (click)="adicionar()">Cadastrar</button>
+  </div>
+</form>

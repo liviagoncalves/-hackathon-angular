@@ -9,6 +9,7 @@ import {UsuariosComponent} from './usuarios/usuarios.component';
 import {HttpClientModule} from '@angular/common/http';
 import {UsuariosService} from './usuarios/service/usuarios.service';
 import { CadastrarUsuariosComponent } from './usuarios/cadastrar-usuarios/cadastrar-usuarios.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CadastrarUsuariosComponent } from './usuarios/cadastrar-usuarios/cadast
     // BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [UsuariosService],
   bootstrap: [AppComponent]
