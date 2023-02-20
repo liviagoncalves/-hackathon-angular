@@ -10,9 +10,12 @@ import {HttpClientModule} from '@angular/common/http';
 import {UsuariosService} from './usuarios/service/usuarios.service';
 import { CadastrarUsuariosComponent } from './usuarios/cadastrar-usuarios/cadastrar-usuarios.component';
 import {FormsModule} from '@angular/forms';
-import {MenubarModule} from "primeng/menubar";
-import {InputTextModule} from "primeng/inputtext";
-import {ButtonModule} from "primeng/button";
+import {MenubarModule} from 'primeng/menubar';
+import {InputTextModule} from 'primeng/inputtext';
+import {ButtonModule} from 'primeng/button';
+import {RippleModule} from "primeng/ripple";
+import {SharedModule} from "primeng/api";
+import {ToolbarModule} from "primeng/toolbar";
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import {ButtonModule} from "primeng/button";
     MenubarModule,
     InputTextModule,
     ButtonModule,
+    RippleModule,
+    SharedModule,
+    ToolbarModule,
   ],
   providers: [UsuariosService],
   bootstrap: [AppComponent]
