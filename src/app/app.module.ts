@@ -10,6 +10,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {UsuariosService} from './usuarios/service/usuarios.service';
 import { CadastrarUsuariosComponent } from './usuarios/cadastrar-usuarios/cadastrar-usuarios.component';
 import {FormsModule} from '@angular/forms';
+import {MenubarModule} from "primeng/menubar";
+import {InputTextModule} from "primeng/inputtext";
+import {ButtonModule} from "primeng/button";
 
 @NgModule({
   declarations: [
@@ -20,10 +23,13 @@ import {FormsModule} from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    // BrowserAnimationsModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    MenubarModule,
+    InputTextModule,
+    ButtonModule,
   ],
   providers: [UsuariosService],
   bootstrap: [AppComponent]

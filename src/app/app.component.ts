@@ -12,34 +12,26 @@ export class AppComponent implements OnInit {
   items: MenuItem[];
 
   ngOnInit(): void {
-    this.items = [{
-      label: 'Options',
-      items: [{
-        label: 'Update',
-        icon: 'pi pi-refresh',
-        command: () => {
-        }
-      },
-        {
-          label: 'Delete',
-          icon: 'pi pi-times',
-          command: () => {
-          }
-        }
-      ]},
+    this.items = [
       {
-        label: 'Navigate',
-        items: [{
-          label: 'Angular Website',
-          icon: 'pi pi-external-link',
-          url: 'http://angular.io'
-        },
+        label: 'Home',
+        url: '/home'
+      },
+      {
+        label: 'Usuarios',
+        items: [
           {
-            label: 'Router',
-            icon: 'pi pi-upload',
-            routerLink: '/fileupload'
+            label: 'Listar',
+            icon: 'pi pi-list',
+            url: '/usuarios'
+          },
+          {
+            label: 'Cadastrar',
+            icon: 'pi pi-plus',
+            routerLink: '/usuarios/cadastrar'
           }
-        ]}
+        ]
+      }
     ];
   }
 }
