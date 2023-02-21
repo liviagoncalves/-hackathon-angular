@@ -17,6 +17,7 @@ import {RippleModule} from 'primeng/ripple';
 import {SharedModule} from 'primeng/api';
 import {ToolbarModule} from 'primeng/toolbar';
 import {PasswordModule} from "primeng/password";
+import {TableModule} from "primeng/table";
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {PasswordModule} from "primeng/password";
     SharedModule,
     ToolbarModule,
     PasswordModule,
+    TableModule,
   ],
   providers: [UsuariosService],
   bootstrap: [AppComponent]

@@ -1,44 +1,47 @@
-<div class="container">
-  <div class="card list-car">
-    <h3 class="text-center col-md-3 col-11" >Lista de Usuarios</h3>
-    <div class="card-body table-responsive" *ngIf="carregarLoading; else carregando">
-      <div class="col-md-3 col-12 d-grid gap-2 d-md-flex justify-content-md-end">
-        <a href="#" [routerLink]="['/usuarios/cadastrar']" class="btn btn-dark btn-lg">Cadastrar
-          <i class="fas fa-plus"></i></a>
+<div class="card">
+  <p-toolbar styleClass="p-mb-4">
+    <ng-template pTemplate="left"></ng-template>
+    <ng-template pTemplate="right">
+      <button pButton pRipple label="Novo Cadastro" icon="pi pi-plus" class="p-button-success p-mr-2" [routerLink]="['usuario/cadastrar']"></button>
+    </ng-template>
+  </p-toolbar>
+  <p-table [value]="usuarios">
+    <ng-template pTemplate="caption">
+      <div class="p-d-flex p-ai-center p-jc-between">
+        <h3 class="p-m-0 ">Listar Usuários</h3>
       </div>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">id</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Login</th>
-            <th scope="col">Email</th>
-            <th scope="col">Data nascimento</th>
-            <th scope="col">Data criação</th>
-            <th scope="col">Data Atualização</th>
-            <th scope="col">Ação</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let u of usuarios">
-            <th scope="row">{{u.idUsuario}}</th>
-            <td>{{u.nome}}</td>
-            <td>{{u.login}}</td>
-            <td>{{u.email}}</td>
-            <td>{{u.dataNascimento}}</td>
-            <td>{{u.dataCriacao}}</td>
-            <td>{{u.dataAtualizacao}}</td>
-            <td>
-              <button type="button" class="btn btn-primary btn-sm">Editar</button>
-              <button type="button" class="btn btn-danger btn-sm" (click)="deleteUser(u.idUsuario)">Excluir</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th>id</th>
+        <th>Nome</th>
+        <th>Login</th>
+        <th>Email</th>
+        <th>Data nascimento</th>
+        <th>Data criação</th>
+        <th>Data Atualização</th>
+        <th>Ação</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-usuarios>
+      <tr>
+        <td>{{usuarios.idUsuario}}</td>
+        <td>{{usuarios.nome}}</td>
+        <td>{{usuarios.login}}</td>
+        <td>{{usuarios.email}}</td>
+        <td>{{usuarios.dataNascimento | date : "dd/MM/yyyy" }}</td>
+        <td>{{usuarios.dataCriacao | date : "dd/MM/yyyy HH:mm:ss" }}</td>
+        <td>{{usuarios.dataAtualizacao | date : "dd/MM/yyyy HH:mm:ss"}}</td>
+        <td>
+          <span class="p-buttonset">
+            <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2" ></button>
+            <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger" (click)="deleteUser(usuarios.idUsuario)"></button>
+          </span>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
 </div>
-
 <ng-template #carregando>
   <div id="preloader">
     <div class="inner">
