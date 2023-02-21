@@ -18,13 +18,15 @@ import {SharedModule} from 'primeng/api';
 import {ToolbarModule} from 'primeng/toolbar';
 import {PasswordModule} from "primeng/password";
 import {TableModule} from "primeng/table";
+import { EditarUsuariosComponent } from './usuarios/editar-usuarios/editar-usuarios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     UsuariosComponent,
-    CadastrarUsuariosComponent
+    CadastrarUsuariosComponent,
+    EditarUsuariosComponent
   ],
   imports: [
     BrowserModule,
