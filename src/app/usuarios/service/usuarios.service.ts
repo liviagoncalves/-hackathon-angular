@@ -30,4 +30,5 @@ export class UsuariosService {
   buscarUsuarioId( id: any){
     return this.$http.get<Usuarios>(`${this.API}/${id}`);
   }
+
 }
