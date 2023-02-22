@@ -17,11 +17,17 @@ export class UsuariosService {
     return this.$http.get<Usuarios[]>(`${this.API}`);
   }
   deleteUser(id: any){
-    return this.$http.delete(`${this.API}/${id}`)
+    return this.$http.delete(`${this.API}/${id}`);
   }
 
   adicionarUsuario(usuarios: Usuarios){
-    return this.$http.post(this.API, usuarios)
+    return this.$http.post(this.API, usuarios);
   }
 
+  editarUsuario(usuarios: Usuarios){
+    return this.$http.put(this.API, usuarios);
+  }
+  buscarUsuarioId( id: any){
+    return this.$http.get<Usuarios>(`${this.API}/${id}`);
+  }
 }

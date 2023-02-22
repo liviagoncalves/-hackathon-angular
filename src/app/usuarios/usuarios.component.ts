@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UsuariosService} from './service/usuarios.service';
 import {Usuarios} from './Objetos/Usuarios';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-usuarios',
@@ -11,7 +12,8 @@ export class UsuariosComponent implements OnInit {
   usuarios: Array<Usuarios> = [];
   carregarLoading = false;
   constructor(
-    private usuariosService: UsuariosService
+    private usuariosService: UsuariosService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -29,5 +31,8 @@ export class UsuariosComponent implements OnInit {
       error => console.log('Usuário não foi excluído'),
       () => console.log('Requisição completa')
     );
+  }
+  editarUsuario = (id: any) => {
+    this.router.navigate(['usuarios/editar', id]);
   }
 }

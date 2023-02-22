@@ -18,7 +18,7 @@ export class CadastrarUsuariosComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  adicionar = () => {
+  adicionarUsuario = () => {
     this.usuariosService.adicionarUsuario(this.usuario).subscribe(
       sucess => this.navegar('usuarios'),
       error => console.log('Não foi possivel cadastrar usuário'),

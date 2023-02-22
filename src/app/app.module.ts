@@ -16,8 +16,8 @@ import {ButtonModule} from 'primeng/button';
 import {RippleModule} from 'primeng/ripple';
 import {SharedModule} from 'primeng/api';
 import {ToolbarModule} from 'primeng/toolbar';
-import {PasswordModule} from "primeng/password";
-import {TableModule} from "primeng/table";
+import {PasswordModule} from 'primeng/password';
+import {TableModule} from 'primeng/table';
 import { EditarUsuariosComponent } from './usuarios/editar-usuarios/editar-usuarios.component';
 
 @NgModule({

@@ -2,7 +2,7 @@
   <p-toolbar styleClass="p-mb-4">
     <ng-template pTemplate="left"></ng-template>
     <ng-template pTemplate="right">
-      <button pButton pRipple label="Novo Cadastro" icon="pi pi-plus" class="p-button-success p-mr-2" [routerLink]="['usuario/cadastrar']"></button>
+      <button pButton pRipple label="Novo Cadastro" icon="pi pi-plus" class="p-button-success p-mr-2" [routerLink]="['cadastrar']"></button>
     </ng-template>
   </p-toolbar>
   <p-table [value]="usuarios">
@@ -34,7 +34,7 @@
         <td>{{usuarios.dataAtualizacao | date : "dd/MM/yyyy HH:mm:ss"}}</td>
         <td>
           <span class="p-buttonset">
-            <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2" ></button>
+            <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2" (click)="editarUsuario(usuarios.idUsuario)"></button>
             <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger" (click)="deleteUser(usuarios.idUsuario)"></button>
           </span>
         </td>
