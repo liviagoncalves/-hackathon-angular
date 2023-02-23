@@ -11,6 +11,7 @@ import {HomeService} from './service/home.service';
 })
 export class HomeComponent implements OnInit {
   aniver: Usuarios;
+  email: [string, any][];
   constructor(
     private homeService: HomeService,
     private router: Router,
@@ -21,12 +22,12 @@ export class HomeComponent implements OnInit {
       this.aniver = result;
       console.log(this.aniver = result);
     });
+    this.homeService.provedorEmail().subscribe(email => {
+      this.email = email;
+      this.email = Object.entries(this.email);
+      console.log(this.email);
+    });
+
   }
 
-  aniversariantesMes = () => {
-    this.homeService.aniversariantesMes().subscribe(result => {
-      this.aniver = result;
-      console.log(this.aniver = result);
-    });
-  }
 }

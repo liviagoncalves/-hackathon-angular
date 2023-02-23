@@ -21,6 +21,28 @@
     </ng-template>
   </p-table>
 </div>
+
+<div class="card">
+  <p-table [value]="email">
+    <ng-template pTemplate="caption">
+      <div class="p-d-flex p-ai-center p-jc-between">
+        <h3 class="p-m-0 ">Listar provedores de email</h3>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Provedores</th>
+        <th>Quantidade</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-email>
+      <tr>
+        <td>{{email[0]}}</td>
+        <td>{{email[1]}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
 <ng-template #carregando>
   <div id="preloader">
     <div class="inner">

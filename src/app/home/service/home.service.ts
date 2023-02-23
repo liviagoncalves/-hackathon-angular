@@ -7,9 +7,13 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class HomeService {
-  private readonly API = `${environment.API}usuarios/aniversariantes`;
+  private readonly API = `${environment.API}usuarios`;
   constructor(private $http: HttpClient) { }
   aniversariantesMes(){
-    return this.$http.get<Usuarios>(`${this.API}`);
+    return this.$http.get<Usuarios>(`${this.API}/aniversariantes`);
+  }
+
+  provedorEmail(){
+    return this.$http.get<Usuarios>(`${this.API}/email`);
   }
 }
