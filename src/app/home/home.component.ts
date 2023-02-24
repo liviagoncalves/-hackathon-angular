@@ -11,7 +11,7 @@ import {HomeService} from './service/home.service';
 })
 export class HomeComponent implements OnInit {
   aniver: Usuarios;
-  email: [string, any][];
+  email: Usuarios;
   constructor(
     private homeService: HomeService,
     private router: Router,
