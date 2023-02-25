@@ -8,7 +8,7 @@ import { EditarUsuariosComponent } from './usuarios/editar-usuarios/editar-usuar
 
 const routes: Routes = [
   // { path: '', component: AppComponent }
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'usuarios', component: UsuariosComponent },
   { path: 'usuarios/cadastrar', component: CadastrarUsuariosComponent },
   { path: 'usuarios/editar', component: EditarUsuariosComponent },

@@ -11,7 +11,7 @@ import {HomeService} from './service/home.service';
 })
 export class HomeComponent implements OnInit {
   aniver: Usuarios;
-  email: Usuarios;
+  email: [string, any][];
   constructor(
     private homeService: HomeService,
     private router: Router,
@@ -23,8 +23,8 @@ export class HomeComponent implements OnInit {
       console.log(this.aniver = result);
     });
     this.homeService.provedorEmail().subscribe(email => {
-      this.email = email;
-      this.email = Object.entries(this.email);
+      // this.email = email;
+      this.email = Object.entries(email);
       console.log(this.email);
     });
 
